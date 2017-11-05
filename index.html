@@ -11863,9 +11863,18 @@ a.anchor-link {
 </div>
 </div>
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Setup">Setup<a class="anchor-link" href="#Setup">&#182;</a></h2>
+</div>
+</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
@@ -11878,10 +11887,10 @@ a.anchor-link {
 </div>
 </div>
 
-</div><div class="fragment">
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">host</span>  <span class="o">=</span> <span class="n">cfg</span><span class="o">.</span><span class="n">host</span>
@@ -11896,7 +11905,7 @@ a.anchor-link {
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -11905,10 +11914,10 @@ a.anchor-link {
 <h2 id="Retrieving-a-particular-revision-(commit-id)-of-a-configuration-file">Retrieving a particular revision (commit id) of a configuration file<a class="anchor-link" href="#Retrieving-a-particular-revision-(commit-id)-of-a-configuration-file">&#182;</a></h2>
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">esn</span> <span class="o">=</span> <span class="mi">86934377556082908</span>
@@ -11922,13 +11931,11 @@ a.anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{host}</span><span class="s1">/rest/api/1.0/projects/</span><span class="si">{project}</span><span class="s1">/repos/</span><span class="si">{repo}</span><span class="s1">/browse/APE/TMCDB_DATA/</span><span class="si">{ESN}</span><span class="s1">.xml&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">host</span><span class="p">,</span> 
-                                                                                                   <span class="n">project</span><span class="o">=</span><span class="n">project</span><span class="p">,</span> 
-                                                                                                   <span class="n">repo</span><span class="o">=</span><span class="n">repo</span><span class="p">,</span> 
-                                                                                                   <span class="n">ESN</span><span class="o">=</span><span class="n">esn</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">baseUrl</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{host}</span><span class="s1">/rest/api/1.0/projects/</span><span class="si">{project}</span><span class="s1">/repos/</span><span class="si">{repo}</span><span class="s1">/browse/APE/TMCDB_DATA/</span><span class="si">{ESN}</span><span class="s1">.xml&#39;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="n">baseUrl</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">host</span><span class="p">,</span> <span class="n">project</span><span class="o">=</span><span class="n">project</span><span class="p">,</span> <span class="n">repo</span><span class="o">=</span><span class="n">repo</span><span class="p">,</span> <span class="n">ESN</span><span class="o">=</span><span class="n">esn</span><span class="p">)</span>
 <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;at&#39;</span> <span class="p">:</span> <span class="n">rev</span><span class="p">}</span>
 <span class="n">resp</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">))</span>
 </pre></div>
@@ -11937,10 +11944,10 @@ a.anchor-link {
 </div>
 </div>
 
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># JSON response</span>
@@ -12069,10 +12076,10 @@ a.anchor-link {
 </div>
 </div>
 
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Plain xml configuration file</span>
@@ -12132,7 +12139,7 @@ a.anchor-link {
 </div>
 </div>
 
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12141,15 +12148,14 @@ a.anchor-link {
 <h2 id="Getting-commits-history-for-a-particular-configuration-file">Getting commits history for a particular configuration file<a class="anchor-link" href="#Getting-commits-history-for-a-particular-configuration-file">&#182;</a></h2>
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{host}</span><span class="s1">/rest/api/1.0/projects/</span><span class="si">{project}</span><span class="s1">/repos/</span><span class="si">{repo}</span><span class="s1">/commits&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">host</span><span class="p">,</span> 
-                                                                           <span class="n">project</span><span class="o">=</span><span class="n">project</span><span class="p">,</span> 
-                                                                           <span class="n">repo</span><span class="o">=</span><span class="n">repo</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">baseUrl</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{host}</span><span class="s1">/rest/api/1.0/projects/</span><span class="si">{project}</span><span class="s1">/repos/</span><span class="si">{repo}</span><span class="s1">/commits&#39;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="n">baseUrl</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">host</span><span class="p">,</span> <span class="n">project</span><span class="o">=</span><span class="n">project</span><span class="p">,</span> <span class="n">repo</span><span class="o">=</span><span class="n">repo</span><span class="p">)</span>
 <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;path&#39;</span> <span class="p">:</span> <span class="s1">&#39;APE/TMCDB_DATA/</span><span class="si">{ESN}</span><span class="s1">.xml&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ESN</span><span class="o">=</span><span class="n">esn</span><span class="p">),</span> <span class="s1">&#39;limit&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">}</span>
 <span class="n">resp</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">))</span>
 </pre></div>
@@ -12158,10 +12164,10 @@ a.anchor-link {
 </div>
 </div>
 
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># JSON response</span>
@@ -12247,10 +12253,10 @@ a.anchor-link {
 </div>
 </div>
 
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
